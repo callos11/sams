@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register students</title>
+</head>
+<body>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .main_student_container{
+            background-color: rgb(240, 240, 240);
+            padding-top: 8rem;
+            width: 100%;
+            height: 24rem;
+        }
+        .row_one{
+            display: flex;
+        }
+        .row_two{
+            display: flex;
+        }
+        .row_three{
+            display: flex;
+        }
+        input{
+            height: 3.8rem;
+        }
+        /*responsiveness
+        //mobiles
+        -small:320px-480px(older smartphones)
+        -medium:481px-768px(modern phones)
+        //tablets
+        -small:769px-1024px(ipad mini)
+        -medium:1025px-1280px(ipad pro)
+        //Desktop
+        -small:1281px-1440px(laptop screens)
+        -medium:1441px-1920px(standard,desktop monitors)
+        -large:1921px->above(wide-screen)
+        */
+        @media only screen and (max-width:480px){
+            
+            .container_seperate{
+                display: block;
+                margin-left: 20rem;
+            }
+            .input1{
+                height: 4rem;
+            }
+        }
+
+    </style>
+    <div class="student_container">
+        <form action="" method="post">
+            <div class="main_student_container">
+                <div class="container_seperate" style="display: flex;justify-content:center;">
+                    <div class="container_one">
+                        <!--start row one-->
+                        <div class="row_one">
+                            <div class="name">
+                                <label for="name">Name</label>
+                                <br>
+                                <input type="text" name="name" class="input1" style="width: 11rem;height:22px;border-radius:5px;padding-left:6px;margin-top:6px;" maxlength="100" aria-controls="active" placeholder="name">
+                            </div>
+                            <div class="mat" style="margin-left: 25px;">
+                                <label for="matricule" style="font-weight: 500;">Matricule</label>
+                                <br>
+                                <input type="text" name="matricule" style="width: 11rem;height:22px;border-radius:5px;padding-left:6px;margin-top:6px;" maxlength="50" placeholder="matricule">
+                            </div>
+                        </div><!--end row one-->
+                        <!--start row two-->
+                        <div class="row_two">
+                            <div class="department" style="padding-top:20px;">
+                                <label for="departments">Departments</label>
+                                <br>
+                                <button type="button" id="showdepartment" style="width: 11rem;height:2rem;border-radius:5px;margin-top:9px;background-color:rgb(255, 255, 255);border-color:rgb(221, 221, 221);font-weight:500;" class="list_btn">List all department</button>
+                                <ul id="list" style="list-style-type:none;
+                                            display:none;">
+                                    <li><input type="checkbox" name="law" >law</li>
+                                    <li><input type="checkbox" name="law" >science</li>
+                                    <li><input type="checkbox" name="law" >Arts</li>
+                                    <li><input type="checkbox" name="law" >Technology</li>
+                                    <li><input type="checkbox" name="law" >Medicine</li>
+                                </ul>
+                            </div>
+                            <div class="date" style="margin-left: 35px;padding-top:28px;">
+                                <!--section for realtime code using js-->
+                                <label for="date" style="font-weight:500;">Date</label>
+                                <br>
+                                <p style="font-size: 14px;padding-top:10px;">12/09/2024,12:00:48</p>
+                            </div>
+                        </div><!--end row two-->
+                        <!--start row three-->
+                                <div class="row_three" style="padding-top:20px;">
+                                    <div class="submit">
+                                        <button type="submit" style="width: 11rem;height:2rem;border-radius:5px;margin-top:9px;background-color:rgb(23, 48, 116);color:white; border-color:rgb(9, 64, 167);font-weight:500;">Register</button>
+                                    </div>
+                                    <!--section for finger_print data code from the sensor device-->
+                                    <div class="fp">
+                                        <div class="finger_data">
+                                            <label for="finger_print" style="margin-left: 35px;">Finger_Hashed_Data</label>
+                                            <br>
+                                            <p id="finger_print" style="font-size:14px;padding-top:4px;padding-left:32px;">4gb5xxgs545dse45w4sd6a68e81d61</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    <div class="container_two" style="border:2px solid rgb(219, 219, 219);border-radius:7px; background-color:rgb(255, 255, 255);margin-left:7rem;box-shadow:4rem;">
+                        <img src="/arduino_codes/images/finger.png" alt="" srcset="" style="width:180px;height:200px;">
+                    </div>
+                </div>
+            </div>
+        </form>
+</body>
+</html>

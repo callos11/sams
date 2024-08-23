@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Student</title>
+</head>
+<body>
+    <form  method="post">
+        <div class="student_name">
+            <div class="student_name">
+                <label for="name">Name</label>
+                <input type="text" name="name">
+            </div>
+            <div class="student_name_matricule">
+                <label for="name">matric-No</label>
+                <input type="text" name="matricule">
+            </div>
+        </div>
+        <div class="department">
+            <div class="department" style="width: auto; height:auto; position:relative">
+               <button type="button" id="showdepartment">department</button>
+                <ul id="list" style="list-style-type:none;
+                            display:none;">
+                    <li><input type="checkbox" name="law" >law</li>
+                    <li><input type="checkbox" name="law" >science</li>
+                    <li><input type="checkbox" name="law" >Arts</li>
+                    <li><input type="checkbox" name="law" >Technology</li>
+                    <li><input type="checkbox" name="law" >Medcine</li>
+                </ul>
+                <br>
+                <label for="date" mane="date">date</label>
+                <p id="date">22:00</p>
+            
+            </div>
+        </div>
+    </form>
+
+    <script>
+        document.getElementById('showdepartment').onclick=function(){
+            var list= document.getElementById('list');
+            if (list.style.display==='none'){
+                list.style.display='block';
+    
+            }else{
+                list.style.display='none';
+            }
+            
+        };
+    </script>
+</body>
+</html>
